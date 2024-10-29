@@ -1,0 +1,363 @@
+$accent-color: #151515;
+
+$container-width: 1440px;
+
+$section-spacing: 200px;
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+body,
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #f0f0f0;
+}
+
+.header {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  height: 120px;
+  gap: 10px;
+  justify-content: space-between;
+
+  &__auth {
+    display: flex;
+    gap: 10px;
+  }
+  &__nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: auto;
+
+    &__link {
+      color: #151515;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+}
+.button {
+  font-size: 18px;
+  padding: 14px 20px;
+  border: none;
+  background: $accent-color;
+  color: #fff;
+  white-space: nowrap;
+
+  &--white {
+    background: #fff;
+
+    color: $accent-color;
+  }
+}
+
+.hero {
+  @include container;
+
+  display: flex;
+  gap: 90px;
+
+  &-info {
+    margin-top: 90px;
+
+    &__email {
+      display: flex;
+      width: 505px;
+      margin-top: 40px;
+    }
+
+    &__pay {
+      margin-top: 80px;
+      display: flex;
+      gap: 28px;
+    }
+
+    &__title {
+      font-size: 70px;
+      font-weight: 400;
+    }
+    &__discription {
+      font-size: 18px;
+      width: 565px;
+      margin-top: 20px;
+    }
+  }
+}
+.input {
+  padding: 14px 16px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
+
+.badge {
+  border: 1px solid black;
+  padding: 6px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.about {
+  @include container;
+  margin-top: 200px;
+  display: flex;
+  gap: 60px;
+
+  &__image {
+    width: 580px;
+    height: 500px;
+  }
+  &-info {
+    max-width: 700px;
+
+    &__title {
+      margin-top: 40px;
+      font-size: 54px;
+      color: $accent-color;
+      font-weight: 400;
+    }
+    &__discription {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+  }
+}
+.list {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+
+  &__item {
+    &::before {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: black;
+      margin-right: 29px;
+    }
+  }
+}
+.works {
+  @include container;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  &-info {
+    width: 850px;
+
+    &__title {
+      font-size: 54px;
+      font-weight: 400;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    gap: 28px;
+  }
+  &__image {
+    align-items: center;
+  }
+}
+
+.list-box-content {
+  &__title {
+    font-size: 28px;
+    color: $accent-color;
+    font-weight: 400;
+  }
+  &__description {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+}
+
+.Pricing {
+  @include container;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    width: 380px;
+    height: 404px;
+  }
+  &-info {
+    max-width: 700px;
+
+    &__title {
+      margin-top: 40px;
+      font-size: 60px;
+      color: $accent-color;
+      font-weight: 400;
+    }
+    &__discription {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}
+
+
+.pricing {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 200px;
+  &__image {
+    width: 470px;
+    height: 500px;
+  }
+}
+.pricing-info {
+  width: 750px;
+  text-align: right;
+  &__title {
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-top: 120px;
+  }
+}
+/*Секция "price" GRID*/
+.price-count {
+  @include container;
+  display: grid;
+  margin-top: 60px;
+
+  grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  gap: 40px;
+  height: 644px;
+
+  &__month {
+    border: #000000 solid 1px;
+    padding: 40px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__info {
+      display: flex;
+      &__dollar {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      &__count {
+        font-size: 80px;
+        font-weight: 800;
+      }
+      &__info {
+        display: flex;
+        align-items: flex-end;
+        font-size: 20px;
+        font-weight: 800;
+      }
+    }
+    &__list {
+      width: 570px;
+      font-size: 18px;
+      font-weight: 400;
+      list-style-type: square;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  &__yearly {
+    padding: 40px;
+    background: $accent-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__info {
+      display: flex;
+      &__dollar {
+        font-size: 20px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      &__count {
+        font-size: 80px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+      &__info {
+        display: flex;
+        align-items: flex-end;
+        font-size: 20px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+    }
+    &__list {
+      width: 570px;
+      font-size: 18px;
+      font-weight: 400;
+      list-style-type: square;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #ffffff;
+    }
+  }
+  &__alltime {
+    padding: 40px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__info {
+      display: flex;
+      &__dollar {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      &__count {
+        font-size: 80px;
+        font-weight: 800;
+      }
+      &__info {
+        display: flex;
+        align-items: flex-end;
+        font-size: 20px;
+        font-weight: 800;
+      }
+    }
+    &__list {
+      width: 570px;
+      font-size: 18px;
+      font-weight: 400;
+      list-style-type: square;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
